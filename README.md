@@ -7,7 +7,7 @@
 ## Getting started:
 
 1. When you open Ubuntu app it is most likely to ask you to create a profile with a password.
-2. Install Ansible:
+2. Install Ansible in WSL:
    
    ```
    sudo apt-get install ansible
