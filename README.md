@@ -168,3 +168,35 @@ vagrant ssh
 ```
 
 I use this as a shortcut, you can find this information on https://github.com/ChristianLempa/videos/blob/main/ansible-and-vagrant/README.md?plain=1
+
+### Explore Vagrant Boxes
+
+Probably, you want to install other Operating Systems like Windows Servers, Windows 10 or also other Linux distributions as well. You can find all those different boxes on the Vagrant box cataloge. Don't forget to filter the results for your desired provider. Otherwise, the results may not work on your hypervisor.
+
+For example, I've also tested the `generic/ubuntu2004` box. This contains an Ubuntu 20.04 LTS image. If you want to create a second virtual machine, simply create a new folder. Note, you don't need to init a new Vagrantfile with the `vagrant init` command. You can also copy the Vagrantfile of your first virtual machine and use this as a template.
+
+If you start the virtual machine, Vagrant will automatically download the box and store this on your computer. That means, you don't need to download the box image again. If you want to check what boxes are currently stored on your computer, use this command.
+
+```powershell
+vagrant box list
+```
+
+You can also manage boxes, for example remove them to clean up your system with this command.
+
+```powershell
+vagrant box remove <your-box-name>
+```
+
+### Manage virtual machines with vagrant
+
+Check what virtual machines are currently running with Vagrant using this command. This can be executed from any directory.
+
+```powershell
+vagrant global-status
+```
+
+This will probably show orphaned records as well. This is because Vagrant is cashing the data and this may not be fully up to date. To clear the cash and remove invalid entries, execute this command
+
+```powershell
+vagrant global-status --prune
+```
