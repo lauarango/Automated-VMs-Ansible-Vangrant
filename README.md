@@ -166,3 +166,5 @@ vagrant up
 ```
 vagrant ssh
 ```
+
+I use this as a shortcut, you can find this information on https://github.com/ChristianLempa/videos/blob/main/ansible-and-vagrant/README.md?plain=1
